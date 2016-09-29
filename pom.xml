@@ -7,6 +7,68 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>scaffold Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
+	<repositories>
+		<repository>
+			<id>oschina Releases</id>
+			<name>oschina Releases</name>
+			<url>http://maven.oschina.net/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>apache-repo</id>
+			<name>apache Repository</name>
+			<url>https://repository.apache.org/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>java-repo</id>
+			<name>java Repository</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.spring.io/release/</url>
+		</repository>
+		<repository>
+			<id>springsource-repo-snapshot</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.spring.io/snapshot/</url>
+		</repository>
+		<repository>
+			<id>cloudhopper</id>
+			<name>Repository for Cloudhopper</name>
+			<url>http://maven.cloudhopper.com/repos/third-party/</url>
+		</repository>
+		<repository>
+			<id>jboss-repo-releases</id>
+			<name>Jboss Repository</name>
+			<url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<name>Maven Repository Switchboard</name>
+			<layout>default</layout>
+			<url>http://repo.maven.apache.org/maven2</url>
+		</repository>
+		<repository>
+			<id>maven-repo1</id>
+			<name>maven-repo1</name>
+			<layout>default</layout>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>sourceforge-releases</id>
+			<name>Sourceforge Releases</name>
+			<url>https://oss.sonatype.org/content/repositories/sourceforge-releases</url>
+		</repository>
+		<repository>
+			<id>clojars</id>
+			<name>clojars Releases</name>
+			<url>http://clojars.org/repo/</url>
+		</repository>
+	</repositories>
+	
 		<properties>
 			<!-- 			
 				能使用的全局变量：  
@@ -53,6 +115,7 @@
 			<poi.version>3.9</poi.version>
 			<freemarker.version>2.3.20</freemarker.version>
 			<xstream.version>1.4.7</xstream.version>
+			<tomcat.version>7.0.47</tomcat.version>
 		</properties>
 		<dependencies>
 		<!-- Spring WebMVC Start -->
@@ -271,6 +334,13 @@
 				<artifactId>standard</artifactId>
 				<version>1.1.2</version>
 			</dependency>
+			
+			<dependency>
+			    <groupId>org.apache.tomcat</groupId>
+			    <artifactId>tomcat-catalina</artifactId>
+			    <version>${tomcat.version}</version>
+			    <scope>provided</scope>
+			</dependency>
 			<!-- Servlet End -->
 		
 			<!-- CACHE begin -->
@@ -460,6 +530,13 @@
 				<groupId>io.netty</groupId>
 				<artifactId>netty-all</artifactId>
 				<version>5.0.0.Alpha2</version>
+			</dependency>
+			
+			<!-- 验证码 -->
+			<dependency>
+				<groupId>com.github.axet</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>0.0.9</version>
 			</dependency>
 		
 		</dependencies>
