@@ -12,7 +12,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd
 http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 	
 	<!-- 使用Annotation自动注册Bean,只扫描@Controller,防止事务失效-->
-	<context:component-scan base-package="com.chthhk" use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
+	<context:component-scan base-package="com.chthhk,org.springframework.samples.mvc" use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	

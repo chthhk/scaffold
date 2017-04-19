@@ -60,7 +60,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<!--configLocation属性指定mybatis的核心配置文件 -->
 		<property name="configLocation" value="classpath:sql-map-config.xml" />
-		<property name="mapperLocations" value="classpath:mybatis/mysql/*Mapper.xml" />
+		<property name="mapperLocations" value="classpath*:mybatis/mysql/*Mapper.xml" />
 	</bean>
 
 	<!--MapperScannerConfigurer配置 -->
