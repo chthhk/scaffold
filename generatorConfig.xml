@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+<classPathEntry location="d:\java\apache-maven-3.1.1\mvn\ojdbc6.jar" />
+  <context id="context1" >
+ 	<!-- 去除自动生成的注释 -->
+	<commentGenerator>
+	    <property name="suppressAllComments" value="true"/> 
+	    <property name="suppressDate" value="true"/>
+	</commentGenerator>
+    <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@//10.202.249.137:1521/fnods.fn.com" userId="" password="" />
+    <javaModelGenerator targetPackage="com.feiniu.bi.entity" targetProject="bi-portal" />
+    <sqlMapGenerator targetPackage="com.feiniu.bi.dao.mapper"  targetProject="bi-portal" />
+    <javaClientGenerator targetPackage="com.feiniu.bi.dao" targetProject="bi-portal" type="XMLMAPPER" />
+     <table tableName="tmp_dim_app_channel" domainObjectName="AppDimChannel"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+      	<!-- <ignoreColumn column="rn" />
+      	<columnOverride column="idauto" jdbcType="BIGINT" /> -->
+      </table>
+  </context>
+</generatorConfiguration>
