@@ -618,6 +618,33 @@
 						<testFailureIgnore>true</testFailureIgnore>
 					</configuration>
 				</plugin>
+				
+				<!-- <plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>copy-resources</id>
+							<phase>package</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<encoding>UTF-8</encoding>
+								复制${log4j.path}（变量）下面的log4j2.xml到classpath目录
+								<outputDirectory>${project.build.outputDirectory}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${log4j.path}</directory>
+										<includes>
+											<include>log4j2.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin> -->
 			</plugins>
 			
 			<filters>
